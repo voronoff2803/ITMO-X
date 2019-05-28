@@ -12,7 +12,10 @@ import UIKit
 extension UIViewController {
     func loadingIndicator(show: Bool) {
         DispatchQueue.main.async {
-            if show {
+            let tableView = self.view as? UITableView
+            let count = tableView?.numberOfRows(inSection: 0) ?? 0
+
+            if show && count == 0 {
                 var offset: CGFloat = 0.0
                 if let tableView = self.view as? UITableView {
                     offset = tableView.contentOffset.y
@@ -25,7 +28,7 @@ extension UIViewController {
                 back.transform = CGAffineTransform(translationX: 0, y: offset)
                 back.backgroundColor = Config.Colors.white
                 let indicator = UIActivityIndicatorView()
-                indicator.center = CGPoint(x: back.frame.width/2, y: back.frame.height/2)
+                indicator.center = CGPoint(x: back.frame.width/2, y: back.frame.height/2 - 50)
                 if Config.Colors.blackStatus {
                     indicator.style = .whiteLarge
                 } else {

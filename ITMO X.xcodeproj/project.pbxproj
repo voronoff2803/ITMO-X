@@ -24,6 +24,10 @@
 		0D8C5C872288B7EF003E019C /* CdeSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C5C862288B7EF003E019C /* CdeSubjectCell.swift */; };
 		0D8C5C892288CF69003E019C /* UIViewController+LoadIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C5C882288CF69003E019C /* UIViewController+LoadIndicator.swift */; };
 		0D8C5C8B2288D3C9003E019C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C5C8A2288D3C9003E019C /* Helper.swift */; };
+		0D8EE344229DEEA8002707B7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EE343229DEEA8002707B7 /* NotificationCenter.framework */; };
+		0D8EE347229DEEA8002707B7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8EE346229DEEA8002707B7 /* TodayViewController.swift */; };
+		0D8EE34A229DEEA8002707B7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8EE348229DEEA8002707B7 /* MainInterface.storyboard */; };
+		0D8EE34E229DEEA8002707B7 /* ITMO X widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D8EE341229DEEA8002707B7 /* ITMO X widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0DCB34C9228C856800D2C5AE /* UILabel+change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB34C8228C856800D2C5AE /* UILabel+change.swift */; };
 		0DD1256D22881956009B858E /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1256C22881956009B858E /* ApiWorker.swift */; };
 		0DD1256F22882C4F009B858E /* ScheduleSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1256E22882C4F009B858E /* ScheduleSubject.swift */; };
@@ -33,6 +37,30 @@
 		0DD1257B228856CB009B858E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1257A228856CB009B858E /* NavigationController.swift */; };
 		0DD1257D22886D1A009B858E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1257C22886D1A009B858E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D8EE34C229DEEA8002707B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D2D7D8E22876D2200E5E29C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D8EE340229DEEA8002707B7;
+			remoteInfo = "ITMO X widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D8EE352229DEEA8002707B7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0D8EE34E229DEEA8002707B7 /* ITMO X widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D2D7D9622876D2200E5E29C /* ITMO X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITMO X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +82,11 @@
 		0D8C5C862288B7EF003E019C /* CdeSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdeSubjectCell.swift; sourceTree = "<group>"; };
 		0D8C5C882288CF69003E019C /* UIViewController+LoadIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadIndicator.swift"; sourceTree = "<group>"; };
 		0D8C5C8A2288D3C9003E019C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		0D8EE341229DEEA8002707B7 /* ITMO X widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ITMO X widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8EE343229DEEA8002707B7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0D8EE346229DEEA8002707B7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0D8EE349229DEEA8002707B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0D8EE34B229DEEA8002707B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DCB34C8228C856800D2C5AE /* UILabel+change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+change.swift"; sourceTree = "<group>"; };
 		0DD1256C22881956009B858E /* ApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWorker.swift; sourceTree = "<group>"; };
 		0DD1256E22882C4F009B858E /* ScheduleSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSubject.swift; sourceTree = "<group>"; };
@@ -72,6 +105,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D8EE33E229DEEA8002707B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8EE344229DEEA8002707B7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				0D2D7D9822876D2200E5E29C /* ITMO X */,
+				0D8EE345229DEEA8002707B7 /* ITMO X widget */,
+				0D8EE342229DEEA8002707B7 /* Frameworks */,
 				0D2D7D9722876D2200E5E29C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2D7D9622876D2200E5E29C /* ITMO X.app */,
+				0D8EE341229DEEA8002707B7 /* ITMO X widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +200,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0D8EE342229DEEA8002707B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8EE343229DEEA8002707B7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D8EE345229DEEA8002707B7 /* ITMO X widget */ = {
+			isa = PBXGroup;
+			children = (
+				0D8EE346229DEEA8002707B7 /* TodayViewController.swift */,
+				0D8EE348229DEEA8002707B7 /* MainInterface.storyboard */,
+				0D8EE34B229DEEA8002707B7 /* Info.plist */,
+			);
+			path = "ITMO X widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,15 +228,34 @@
 				0D2D7D9222876D2200E5E29C /* Sources */,
 				0D2D7D9322876D2200E5E29C /* Frameworks */,
 				0D2D7D9422876D2200E5E29C /* Resources */,
+				0D8EE352229DEEA8002707B7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0D8EE34D229DEEA8002707B7 /* PBXTargetDependency */,
 			);
 			name = "ITMO X";
 			productName = "ITMO X";
 			productReference = 0D2D7D9622876D2200E5E29C /* ITMO X.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0D8EE340229DEEA8002707B7 /* ITMO X widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8EE351229DEEA8002707B7 /* Build configuration list for PBXNativeTarget "ITMO X widget" */;
+			buildPhases = (
+				0D8EE33D229DEEA8002707B7 /* Sources */,
+				0D8EE33E229DEEA8002707B7 /* Frameworks */,
+				0D8EE33F229DEEA8002707B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ITMO X widget";
+			productName = "ITMO X widget";
+			productReference = 0D8EE341229DEEA8002707B7 /* ITMO X widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -187,6 +268,9 @@
 				ORGANIZATIONNAME = "Alexey Voronov";
 				TargetAttributes = {
 					0D2D7D9522876D2200E5E29C = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					0D8EE340229DEEA8002707B7 = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
@@ -205,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				0D2D7D9522876D2200E5E29C /* ITMO X */,
+				0D8EE340229DEEA8002707B7 /* ITMO X widget */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +302,14 @@
 				0D2D7DA422876D2300E5E29C /* LaunchScreen.storyboard in Resources */,
 				0D86F8AD2289B07400712C2B /* Settings.bundle in Resources */,
 				0D2D7DA122876D2300E5E29C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D8EE33F229DEEA8002707B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8EE34A229DEEA8002707B7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +345,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D8EE33D229DEEA8002707B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8EE347229DEEA8002707B7 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D8EE34D229DEEA8002707B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D8EE340229DEEA8002707B7 /* ITMO X widget */;
+			targetProxy = 0D8EE34C229DEEA8002707B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0D2D7DA222876D2300E5E29C /* LaunchScreen.storyboard */ = {
@@ -261,6 +370,14 @@
 				0D2D7DA322876D2300E5E29C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0D8EE348229DEEA8002707B7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D8EE349229DEEA8002707B7 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -385,6 +502,7 @@
 		0D2D7DA922876D2300E5E29C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3WBMTG67K;
@@ -404,6 +522,7 @@
 		0D2D7DAA22876D2300E5E29C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3WBMTG67K;
@@ -417,6 +536,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0D8EE34F229DEEA8002707B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3WBMTG67K;
+				INFOPLIST_FILE = "ITMO X widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.voronov.ITMO-X.ITMO-X-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0D8EE350229DEEA8002707B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3WBMTG67K;
+				INFOPLIST_FILE = "ITMO X widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.voronov.ITMO-X.ITMO-X-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -437,6 +594,15 @@
 			buildConfigurations = (
 				0D2D7DA922876D2300E5E29C /* Debug */,
 				0D2D7DAA22876D2300E5E29C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D8EE351229DEEA8002707B7 /* Build configuration list for PBXNativeTarget "ITMO X widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8EE34F229DEEA8002707B7 /* Debug */,
+				0D8EE350229DEEA8002707B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
