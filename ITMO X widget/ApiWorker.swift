@@ -11,7 +11,7 @@ import Foundation
 class ApiWorker {
     static var shared = ApiWorker()
     private init() {
-        self.group = UserDefaults(suiteName: "group.blockcontent")!.string(forKey: "group") ?? self.group
+        self.group = UserDefaults(suiteName: "group.ITMO-X")!.string(forKey: "group") ?? self.group
     }
     
     private let baseURL = "https://mountain.ifmo.ru/api.ifmo.ru/public/v1/"
