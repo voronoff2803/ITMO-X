@@ -34,6 +34,7 @@
 		0D8EE35E229DFF38002707B7 /* UIView+anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8EE35D229DFF38002707B7 /* UIView+anchor.swift */; };
 		0D8EE364229E0065002707B7 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8EE363229E0065002707B7 /* ScheduleCell.swift */; };
 		0D8EE366229E00FE002707B7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8EE365229E00FE002707B7 /* Helper.swift */; };
+		0D8EE36A229E10A7002707B7 /* UILabel+change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8EE369229E10A7002707B7 /* UILabel+change.swift */; };
 		0DCB34C9228C856800D2C5AE /* UILabel+change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB34C8228C856800D2C5AE /* UILabel+change.swift */; };
 		0DD1256D22881956009B858E /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1256C22881956009B858E /* ApiWorker.swift */; };
 		0DD1256F22882C4F009B858E /* ScheduleSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1256E22882C4F009B858E /* ScheduleSubject.swift */; };
@@ -101,6 +102,7 @@
 		0D8EE35D229DFF38002707B7 /* UIView+anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+anchor.swift"; path = "ITMO X/Extensions/UIView+anchor.swift"; sourceTree = SOURCE_ROOT; };
 		0D8EE363229E0065002707B7 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		0D8EE365229E00FE002707B7 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		0D8EE369229E10A7002707B7 /* UILabel+change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+change.swift"; path = "ITMO X/Extensions/UILabel+change.swift"; sourceTree = SOURCE_ROOT; };
 		0DCB34C8228C856800D2C5AE /* UILabel+change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+change.swift"; sourceTree = "<group>"; };
 		0DD1256C22881956009B858E /* ApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWorker.swift; sourceTree = "<group>"; };
 		0DD1256E22882C4F009B858E /* ScheduleSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSubject.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				0D8EE365229E00FE002707B7 /* Helper.swift */,
 				0D8EE355229DFE17002707B7 /* ApiWorker.swift */,
 				0D8EE35D229DFF38002707B7 /* UIView+anchor.swift */,
+				0D8EE369229E10A7002707B7 /* UILabel+change.swift */,
 				0D8EE356229DFE17002707B7 /* Config.swift */,
 				0D8EE346229DEEA8002707B7 /* TodayViewController.swift */,
 				0D8EE348229DEEA8002707B7 /* MainInterface.storyboard */,
@@ -387,6 +390,7 @@
 				0D8EE364229E0065002707B7 /* ScheduleCell.swift in Sources */,
 				0D8EE35A229DFE39002707B7 /* ScheduleSubject.swift in Sources */,
 				0D8EE347229DEEA8002707B7 /* TodayViewController.swift in Sources */,
+				0D8EE36A229E10A7002707B7 /* UILabel+change.swift in Sources */,
 				0D8EE358229DFE17002707B7 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

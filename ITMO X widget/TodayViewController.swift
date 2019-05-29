@@ -11,12 +11,14 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
-        let expanded = activeDisplayMode == .expanded
-        preferredContentSize = expanded ? CGSize(width: maxSize.width, height: CGFloat(65 * getSubjects(weekType: weekEven, weekDay: Helper.app.normalWeekDay(weekday)).count)) : maxSize
+        if activeDisplayMode == NCWidgetDisplayMode.compact {
+            preferredContentSize = CGSize(width: maxSize.width, height: 65)
+        } else {
+            preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(65 * getSubjects(weekType: weekEven, weekDay: Helper.app.normalWeekDay(weekday)).count))
+        }
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        
         completionHandler(NCUpdateResult.newData)
     }
     

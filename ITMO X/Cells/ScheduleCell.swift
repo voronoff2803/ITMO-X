@@ -93,10 +93,10 @@ class ScheduleCell: UITableViewCell {
         if (self.cellIndex == indexPath && self.subjectNameLabel.text != subject.title) || self.subjectNameLabel.text == nil {
             DispatchQueue.global().asyncAfter(deadline: .now() + .random(in: 0...0.2), execute: {
                 DispatchQueue.main.async {
-                    self.subjectNameLabel.text = subject.title
-                    self.subjectDescriptionLabel.text = place + " " + room
-                    self.startTimeLabel.text = subject.start_time
-                    self.endTimeLabel.text = subject.end_time
+                    self.subjectNameLabel.changeText(text: subject.title)
+                    self.subjectDescriptionLabel.changeText(text: place + " " + room)
+                    self.startTimeLabel.changeText(text: subject.start_time)
+                    self.endTimeLabel.changeText(text: subject.end_time)
                 }
             })
         } else {
@@ -123,14 +123,14 @@ class ScheduleCell: UITableViewCell {
     }
     
     func tapped() {
-        self.subjectDescriptionLabel.text = subject?.person ?? ""
+        self.subjectDescriptionLabel.changeText(text: subject?.person ?? "")
         self.isUserInteractionEnabled = false
         DispatchQueue.global().asyncAfter(deadline: .now() + 2.0, execute: {
             DispatchQueue.main.async {
                 self.isUserInteractionEnabled = true
                 let place = self.subject?.place ?? ""
                 let room = self.subject?.room ?? ""
-                self.subjectDescriptionLabel.text = place + " " + room
+                self.subjectDescriptionLabel.changeText(text: place + " " + room)
             }
         })
     }
