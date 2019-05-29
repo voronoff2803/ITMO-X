@@ -35,6 +35,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.changeEven(ApiWorker.shared.weekEven)
         setup()
         reloadSchedule()
+        extensionContext?.widgetLargestAvailableDisplayMode = .compact
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +43,6 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         setTime()
         title = String(day) + "  " + Config.months[month]
         tableView.reloadData()
-        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     }
     
     func setup() {
