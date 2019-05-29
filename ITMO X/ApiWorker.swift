@@ -128,6 +128,7 @@ class ApiWorker {
                                 if self.group == "" {
                                     self.group = years.last!["group"] as! String
                                     UserDefaults.standard.set(self.group, forKey: "group")
+                                    UserDefaults(suiteName: "group.blockcontent")!.set(self.group, forKey: "group")
                                 }
                                 var result: [CdeSubject] = []
                                 for item in subjects {

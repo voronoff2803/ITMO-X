@@ -22,5 +22,6 @@ class NavigationController: UINavigationController {
         if Config.Colors.blackStatus {
             navigationBar.barStyle = .black
         }
+        print(UserDefaults(suiteName: "group.blockcontent")!.string(forKey: "group"))
     }
 }
