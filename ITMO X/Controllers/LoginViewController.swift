@@ -60,7 +60,9 @@ class LoginViewController: UIViewController {
         tf.placeholder = "Введите логин"
         tf.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         tf.textColor = Config.Colors.black
-        tf.textContentType = .username
+        if #available(iOS 11.0, *) {
+            tf.textContentType = .username
+        }
         return tf
     }()
     
@@ -70,7 +72,9 @@ class LoginViewController: UIViewController {
         tf.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         tf.isSecureTextEntry = true
         tf.textColor = Config.Colors.black
-        tf.textContentType = .password
+        if #available(iOS 11.0, *) {
+            tf.textContentType = .password
+        }
         return tf
     }()
     

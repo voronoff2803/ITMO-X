@@ -90,47 +90,29 @@ class ScheduleCell: UITableViewCell {
         self.subject = subject
         let place = subject.place ?? ""
         let room = subject.room ?? ""
-        if (self.cellIndex == indexPath && self.subjectNameLabel.text != subject.title) || self.subjectNameLabel.text == nil {
-            DispatchQueue.global().asyncAfter(deadline: .now() + .random(in: 0...0.2), execute: {
-                DispatchQueue.main.async {
-                    self.subjectNameLabel.changeText(text: subject.title)
-                    self.subjectDescriptionLabel.changeText(text: place + " " + room)
-                    self.startTimeLabel.changeText(text: subject.start_time)
-                    self.endTimeLabel.changeText(text: subject.end_time)
-                }
-            })
-        } else {
-            self.subjectNameLabel.text = subject.title
-            subjectDescriptionLabel.text = place + " " + room
-            startTimeLabel.text = subject.start_time
-            endTimeLabel.text = subject.end_time
-        }
+        self.subjectNameLabel.text = subject.title
+        self.subjectDescriptionLabel.text = place + " " + room
+        self.startTimeLabel.text = subject.start_time
+        self.endTimeLabel.text = subject.end_time
         if subject.status == "Лек" {
             devider.backgroundColor = Config.Colors.red
         } else {
             devider.backgroundColor = Config.Colors.green
         }
-        let date = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.weekday], from: date)
         
-        if Helper.app.normalWeekDay(components.weekday!) == subject.data_day {
-            current.isHidden = false
-        } else {
-            current.isHidden = true
-        }
+    
         self.cellIndex = indexPath
     }
     
     func tapped() {
-        self.subjectDescriptionLabel.changeText(text: subject?.person ?? "")
+        self.subjectDescriptionLabel.text = subject?.person ?? ""
         self.isUserInteractionEnabled = false
         DispatchQueue.global().asyncAfter(deadline: .now() + 2.0, execute: {
             DispatchQueue.main.async {
                 self.isUserInteractionEnabled = true
                 let place = self.subject?.place ?? ""
                 let room = self.subject?.room ?? ""
-                self.subjectDescriptionLabel.changeText(text: place + " " + room)
+                self.subjectDescriptionLabel.text = place + " " + room
             }
         })
     }

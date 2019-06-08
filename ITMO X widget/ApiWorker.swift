@@ -11,7 +11,7 @@ import Foundation
 class ApiWorker {
     static var shared = ApiWorker()
     private init() {
-        self.group = UserDefaults(suiteName: "group.ITMO-X")!.string(forKey: "group") ?? self.group
+        self.loadGroup()
     }
     
     private let baseURL = "https://mountain.ifmo.ru/api.ifmo.ru/public/v1/"
@@ -23,6 +23,9 @@ class ApiWorker {
     var group: String = ""
     var weekEven = 1
     
+    func loadGroup() {
+        self.group = UserDefaults(suiteName: "group.ITMO-X")!.string(forKey: "group") ?? self.group
+    }
     
     private func serverRequest(endpoint: String, onSuccess: @escaping(Data) -> Void, onFailure: @escaping(Error) -> Void) {
         let urlString : String = baseURL + endpoint

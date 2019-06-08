@@ -13,7 +13,7 @@ struct CdeSubject {
     let mark: String?
     let worktype: String?
     let points: String?
-    let semester: String?
+    let semester: String
     let marks: [CdeMark]?
 }
 

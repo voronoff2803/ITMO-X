@@ -149,13 +149,22 @@ class ApiWorker {
                                                              mark: allMarks.first?.mark,
                                                              worktype: marks.first?["worktype"] as? String,
                                                              points: allMarks.first?.value,
-                                                             semester: item["semester"] as? String,
+                                                             semester: item["semester"] as! String,
                                                              marks: allMarks)
+                                    print(type(of: subject))
                                     result.append(subject)
                                 }
                                 self.cdeSbjects = result
                                 self.deleteCookies()
-                                Config.semestr = result.last?.semester! ?? "1"
+                                var maxSemestr = 1
+                                for item in result {
+                                    if let semestr = Int(item.semester) {
+                                        if semestr > maxSemestr {
+                                            maxSemestr = semestr
+                                        }
+                                    }
+                                }
+                                Config.semestr = String(maxSemestr)
                                 onSuccess()
                             }
                         }

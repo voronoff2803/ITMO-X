@@ -11,10 +11,11 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        reloadSchedule()
         if activeDisplayMode == NCWidgetDisplayMode.compact {
             preferredContentSize = CGSize(width: maxSize.width, height: 65)
         } else {
-            preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(65 * getSubjects(weekType: weekEven, weekDay: Helper.app.normalWeekDay(weekday)).count))
+            self.preferredContentSize = tableView.contentSize
         }
     }
     
@@ -30,31 +31,23 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var weekday = 0
     var month = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.changeEven(ApiWorker.shared.weekEven)
         setup()
-        reloadSchedule()
-        extensionContext?.widgetLargestAvailableDisplayMode = .compact
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setTime()
-        title = String(day) + "  " + Config.months[month]
-        tableView.reloadData()
     }
     
     func setup() {
-        setTime()
         changeEven(weekEven)
         tableView.register(ScheduleCell.self, forCellReuseIdentifier: "ScheduleCell")
         tableView.rowHeight = 65
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = Config.Colors.gray
-        tableView.backgroundColor = Config.Colors.gray
+        tableView.backgroundColor = Config.Colors.white
         tableView.delegate = self
         tableView.dataSource = self
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .compact
         self.view.addSubview(tableView)
     }
     
@@ -85,10 +78,14 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func reloadSchedule() {
+        setTime()
+        ApiWorker.shared.loadGroup()
+        
         ApiWorker.shared.getSchedule(onSuccess: {
             DispatchQueue.main.async {
                 self.changeEven(ApiWorker.shared.weekEven)
                 self.tableView.reloadData()
+                self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
             }
         }) { (error) in
         }
