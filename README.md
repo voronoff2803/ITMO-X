@@ -10,7 +10,7 @@ Open-source itmo app
 - Подробный список баллов по выбраннуму предмету
 - Авторизация через ЦДО
 - Сохранение логина и пароля
-- Темная тема
+- Темная тема/Светлая тема
 
 <img src="https://github.com/voronoff2803/ITMO-X/blob/master/1.png?raw=true" width="300" />
 <img src="https://github.com/voronoff2803/ITMO-X/blob/master/2.png?raw=true" width="300" />
