@@ -11,3 +11,6 @@ Open-source itmo app
 - Сохранение логина и пароля
 - Темная тема
 
+<img src="https://github.com/voronoff2803/ITMO-X/blob/master/1.png?raw=true" width="300" />
+<img src="https://github.com/voronoff2803/ITMO-X/blob/master/2.png?raw=true" width="300" />
+<img src="https://github.com/voronoff2803/ITMO-X/blob/master/3.png?raw=true" width="300" />
